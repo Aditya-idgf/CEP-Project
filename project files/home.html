@@ -4,23 +4,23 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Doctor</title>
+    <title>CureFit</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 </head>
 
 <body>
-    <div class="nav-bar">
+    <nav class="nav-bar">
         <div class="logo-box">
             <a href="home.html" class="logo">CureFit</a>
-        </div> 
+        </div>
         <div class="options">
-            <a href="" class="services">Services</a>
-            <a href="" class="about">About us</a>
-            <a href="" class="help">Help</a>
+            <a href="#" class="services">Services</a>
+            <a href="#" class="about">About us</a>
+            <a href="#" class="help">Help</a>
             <button class="login">Login</button>
         </div>
-    </div>
+    </nav>
     <div class="main-container">
         <div class="title-div">
             <h1>"Your Health, Your Choice"</h1>
@@ -30,81 +30,51 @@
             <p>Find And Book</p>
         </div>
         <div class="sort">
-            <div class="region">
-                <div class="main">
+            <div class="main-search">
+                <div class="main region">
                     <div class="select">
-                        <div class="selected">Select</div>
+                        <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                        <div class="selected">Select Your Region</div>
                         <div class="caret"></div>
                     </div>
                     <ul class="menu">
                         <li>Nigdi</li>
                     </ul>
                 </div>
-            </div>
-            <div class="catagory">
-                <i class="fa-solid fa-stethoscope"></i>
-                    <select class="catagory-input">
-                        <option value="All">All</option>
-                        <option value="MBBS">MBBS</option>
-                        <option value="General Practitioner">General Practitioner</option>
-                        <option value="Pediatrician">Pediatrician</option>
-                        <option value="Cardiologist">Cardiologist</option>
-                        <option value="Dermatologist">Dermatologist</option>
-                        <option value="Orthopedic">Orthopedic</option>
-                        <option value="Gynecologist">Gynecologist</option>
-                        <option value="Surgeon">Surgeon</option>
-                        <option value="ENT Specialist">ENT Specialist</option>
-                        <option value="Dentist">Dentist</option>
-                        <option value="" selected>Select Speclalization‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ </option>
-                    </select>
+                <div class="catagory main">
+                    <div class="select">
+                        <span><i class="fa-solid fa-stethoscope"></i></span>
+                        <div class="selected">‎ ‎ Select Specialization‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎</div>
+                        <div class="caret"></div>
+                    </div>
+                    <ul class="menu">
+                        <li>All</li>
+                        <li>MBBS</li>
+                        <li>General Practitioner</li>
+                        <li>Pediatrician</li>
+                        <li>Dentist</li>
+                        <li>Cardiologist</li>
+                        <li>Dermatologist</li>
+                        <li>Orthopedic</li>
+                        <li>Gynecologist</li>
+                        <li>Surgeon</li>
+                        <li>ENT Specialist</li>
+                    </ul>
+                </div>
             </div>
             <div class="search">
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <span class="search-text">Search</span>
-                
             </div>
         </div>
         <div class="pop-searches">
-                <span class="pop-search-text">Popular searches :</span>
-                <a href="" class="derma">Dermatologist,</a>
-                <a href="" class="pedia">Pediatrician,</a>
-                <a href="" class="gyneco">Gynecologist,</a>
-                <span class="and-more">And</span>
-                <a href="" class="more">More...</a>
+            <span class="pop-searches-text">Popular searches :</span>
+            <a href="#" class="derma">Dermatologist,</a>
+            <a href="#" class="pedia">Pediatrician,</a>
+            <a href="#" class="gyneco">Gynecologist,</a>
+            <span class="and-more">And</span>
+            <a href="#" class="more">More...</a>
         </div>
     </div>
 </body>
-
-<script>
-    const select = document.querySelector('.select');
-    const caret = document.querySelector('.caret');
-    const menu = document.querySelector('.menu');
-    const options = document.querySelectorAll('.menu li');   
-    const selected = document.querySelector('.selected'); 
-
-    select.addEventListener('click', () => {
-        menu.classList.toggle('menu-open');
-        caret.classList.toggle('caret-rotate'); // Rotate caret on click
-    });
-
-    options.forEach((option) => {
-        option.addEventListener('click', () => {
-            selected.innerHTML = option.textContent; // Set selected text
-            menu.classList.remove('menu-open');
-            caret.classList.remove('caret-rotate'); // Reset caret rotation
-
-            // Remove active class from all options
-            options.forEach(opt => opt.classList.remove('active'));
-            // Add active class to the selected option
-            option.classList.add('active');
-        });
-    });
-
-    document.addEventListener('click', (e) => {
-        if (!select.contains(e.target) && !menu.contains(e.target)) {
-            menu.classList.remove('menu-open');
-            caret.classList.remove('caret-rotate'); // Reset caret rotation
-        }
-    });
-</script>
 </html>
