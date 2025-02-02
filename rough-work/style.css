@@ -320,6 +320,25 @@ nav {
   padding-bottom: 7px;
 }
 
+.pop-searches a {
+  position: relative;
+}
+
+.pop-searches a::before {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #ee0653;
+  transition: all 0.5s;
+}
+
+.pop-searches a:hover::before {
+  width: 100%;
+}
+
 .footer {
   background-color: rgba(79, 221, 155, 0.829);
   height: 11rem;
