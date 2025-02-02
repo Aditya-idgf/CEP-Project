@@ -367,6 +367,13 @@ nav {
   font-weight: 500;
   color: rgba(70, 199, 139, 0.829);
   box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.309);
+  transition: transform 0.4s;
+}
+
+.social:hover{
+  transform: scale(1.2);
+  box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.209);
+  color: rgba(66, 184, 129, 0.829);;
 }
 
 .footer-logo {
