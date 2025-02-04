@@ -21,11 +21,12 @@ body {
   align-items: center;
   justify-content: start;
   position: relative;
-  /* background-image: url("pixelcut-export.png");
+  background-image: url("image.jpg");
+  backdrop-filter: blur(10px);
   background-repeat: no-repeat;
   background-position: top;
-  background-attachment: scroll; */
-  /* background-size: cover; */
+  background-attachment: scroll; 
+  background-size: cover; 
 }
 
 .bg-image {
@@ -43,7 +44,7 @@ body a {
 }
 
 nav {
-  background-color: rgba(79, 221, 155, 0.829);
+  background-color: #c2e0ea;
   color: black;
   font-size: 1.3rem;
   width: 100%;
@@ -337,7 +338,7 @@ nav {
   left: 0;
   width: 0%;
   height: 2px;
-  background-color: #ee0653;
+  background-color: #06eeee;
   transition: all 0.5s;
 }
 
@@ -346,8 +347,8 @@ nav {
 }
 
 .footer {
-  background-color: rgba(79, 221, 155, 0.829);
-  height: 11rem;
+  background-color: #c2e0ea;
+  height: 10rem;
   width: 100%;
   position: absolute;
   bottom: 0;
@@ -378,7 +379,7 @@ height: 1.8em;
   padding: 0.2em 0.4em;
   margin: 0.5em 0.9em;
   font-weight: 500;
-  color: rgba(70, 199, 139, 0.829);
+  color: #afd7e5;
   box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.309);
   transition: transform 0.4s;
 
@@ -387,7 +388,7 @@ height: 1.8em;
 .social:hover{
   transform: scale(1.2);
   box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.209);
-  color: rgba(66, 184, 129, 0.829);;
+  color: #84ccd5;
 }
 
 .footer-text {
