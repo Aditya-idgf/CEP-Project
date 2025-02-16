@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CureMe</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="min-h-screen bg-gray-50">
+      
+        <header class="bg-white shadow-sm">
+            <div class="max-w-7xl mx-auto px-4 py-6">
+                <div class="flex justify-between items-center">
+                    <h1 class="text-3xl font-bold text-gray-900">CureMe</h1>
+                    <div class="search-container">
+                        <i data-lucide="search" class="search-icon"></i>
+                        <input 
+                            type="text" 
+                            id="searchInput"
+                            class="search-input" 
+                            placeholder="Search hospitals by name or specialty..."
+                        >
+                    </div>
+                </div>
+            </div>
+        </header>
+
+       
+        <main class="max-w-7xl mx-auto px-4 py-8">
+          
+            <section id="hospitalsSection">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Hospitals</h2>
+                <div class="grid" id="hospitalsGrid"></div>
+            </section>
+
+           
+            <section id="hospitalDetails" class="hidden">
+                <button id="backButton" class="back-button mb-6">
+                    <i data-lucide="arrow-left" class="mr-2"></i>
+                    Back to Hospitals
+                </button>
+                <div id="hospitalInfo" class="mb-8"></div>
+                <div id="hospitalDoctors">
+                    <h3 class="text-xl font-bold text-gray-900 mb-6">Our Medical Team</h3>
+                    <div class="grid" id="doctorsGrid"></div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
